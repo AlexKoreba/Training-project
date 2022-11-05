@@ -1,0 +1,131 @@
+.likes {
+    min-height: calc(100vh - 251px);
+    text-transform: uppercase;
+}
+
+.likes-wrapper {
+    padding: 20px 0 80px 0;
+}
+
+.likes-title {
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.likes-content {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.likes-content-heading {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5px;
+
+    border-top: lightgray solid 1px;
+    border-bottom: lightgray solid 1px;
+    padding: 15px 0;
+}
+
+.first-column, .second-column {
+    flex: 0 1 150px;
+}
+
+.third-column, .fourth-column, .fifth-column {
+    flex: 1 1 150px;
+} 
+
+.likes-content-heading .first-column, .likes-content-heading .second-column, .likes-content-heading .fifth-column {
+    visibility: hidden;
+}
+
+.likes-list-product {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    font-size: 1.2em;
+    border-bottom: lightgray solid 1px;
+    padding: 30px 0;
+}
+
+.likes-list-product .second-column img {
+    width: 100px;
+    height: 140px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.likes-list-product .fourth-column {
+    font-size: 1.2em;
+}
+
+.likes-list-product .fourth-column::after {
+    content: ' BYN';
+}
+
+.remove-from-likes {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.1em;
+    color: darkgray;
+    background-color: #F9F8F6;
+    border: lightgray solid 2px;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in;
+}
+
+.remove-from-likes:hover {
+    color: #252525;
+    border-color: #252525;
+}
+
+.close {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    display: block;
+    width: 12px;
+    height: 1px;
+    background-color: darkgray;
+
+    transition: all 0.3s ease-in;
+}
+
+.close:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.close:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+.remove-from-likes:hover .close {
+    background-color: #252525;
+}
+
+.add-to-basket {
+    font-family: 'Federo', sans-serif;
+    color: #F9F8F6;
+    background-color: #252525;
+    border: #252525 solid 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-right: 5px;
+
+    transition: all 0.3s ease-in;
+}
+
+.add-to-basket:hover, .add-to-basket-active {
+    color: #252525;
+    background-color: #F9F8F6;
+}
+
+.add-to-basket-active {
+    cursor: default;
+}
